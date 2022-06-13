@@ -32,7 +32,7 @@ function stopPainting() {
 function onMouseMove(event) {
     const x = event.offsetX;
     const y = event.offsetY;
-    //마우스를 가져다댈 시
+    // 마우스 가져다댈 시
     // path를 만들어 마우스의 x, y좌표로 넣기 [마우스를 움직이는 모든 순간(마우스 시작점)마다 path 생성]
     if (!painting) {
         ctx.beginPath();
@@ -85,7 +85,7 @@ function handleSaveClick() {
     const image = canvas.toDataURL(); // type 미기재 시 디폴트 png 저장
     const link = document.createElement("a");
     link.href = image;
-    link.download = "PaintJSresult🌈"; //PaintJSresult🌈.png파일로 다운로드
+    link.download = "PaintJSresult🌈"; // PaintJSresult🌈.png파일로 다운로드
     link.click();   
 }
 
@@ -98,7 +98,7 @@ if (canvas) {
     canvas.addEventListener("contextmenu", handleCM);
 }
 
-//jsColor div 클릭 시 해당 div의 style을 array로 출력
+// jsColor div 클릭 시 해당 div의 style을 array로 출력
 Array.from(colors).forEach(lineColor => lineColor.addEventListener("click", handleColorClick));
 
 if (range) {
